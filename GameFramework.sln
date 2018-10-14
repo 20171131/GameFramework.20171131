@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP00.Joohyun's 최적화", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP07.TextureManager", "PP07.TextureManager\PP07.TextureManager.vcxproj", "{53217925-E514-434B-918D-06BBAFBD667C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP08.SingletonTM", "PP08.SingletonTM\PP08.SingletonTM.vcxproj", "{50C566B6-B50A-409E-A614-F2D47779A275}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{53217925-E514-434B-918D-06BBAFBD667C}.Release|x64.Build.0 = Release|x64
 		{53217925-E514-434B-918D-06BBAFBD667C}.Release|x86.ActiveCfg = Release|Win32
 		{53217925-E514-434B-918D-06BBAFBD667C}.Release|x86.Build.0 = Release|Win32
+		{50C566B6-B50A-409E-A614-F2D47779A275}.Debug|x64.ActiveCfg = Debug|x64
+		{50C566B6-B50A-409E-A614-F2D47779A275}.Debug|x64.Build.0 = Debug|x64
+		{50C566B6-B50A-409E-A614-F2D47779A275}.Debug|x86.ActiveCfg = Debug|Win32
+		{50C566B6-B50A-409E-A614-F2D47779A275}.Debug|x86.Build.0 = Debug|Win32
+		{50C566B6-B50A-409E-A614-F2D47779A275}.Release|x64.ActiveCfg = Release|x64
+		{50C566B6-B50A-409E-A614-F2D47779A275}.Release|x64.Build.0 = Release|x64
+		{50C566B6-B50A-409E-A614-F2D47779A275}.Release|x86.ActiveCfg = Release|Win32
+		{50C566B6-B50A-409E-A614-F2D47779A275}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
