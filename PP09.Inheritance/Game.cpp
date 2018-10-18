@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "TextureManager.h"
 #include <SDL_image.h>
 #include <iostream>
 
@@ -21,9 +22,8 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		{
 			return false;
 		}
-
-		//m_textureManager.load("assets/animate-alpha.png", "animate", m_pRenderer);
-
+		m_go.load(100, 100, 128, 82, "animate");
+		m_player.load(300, 300, 128, 82, "animate");
 	}
 	else {
 		return false; // sdl could not initialize
@@ -37,15 +37,10 @@ void Game::render()
 	SDL_RenderClear(m_pRenderer);
 
 	// draw 부분 대치 
-	TheTextureManager::Instance()->draw("animate", 0, 0, 128, 82,
-		m_pRenderer);
+	TheTextureManager::Instance()->draw("animate", 0, 0, 128, 82, m_pRenderer);
 
-	TheTextureManager::Instance()->drawFrame("animate", 100, 100,
-		128, 82, 1, m_currentFrame, m_pRenderer);
+	TheTextureManager::Instance()->drawFrame("animate", 100, 100, 128, 82, 1, m_currentFrame, m_pRenderer);
 
-	/*m_textureManager.draw("animate", 0, 0, 128, 82, m_pRenderer);
-	m_textureManager.drawFrame("animate", 100, 100, 128, 82, 1,
-		m_currentFrame, m_pRenderer);*/
 	SDL_RenderPresent(m_pRenderer);
 
 }
