@@ -1,5 +1,9 @@
 #include "GameObject.h"
 #include "TextureManager.h"
+#include <SDL_image.h>
+#include <iostream>
+
+using namespace std;
 
 void GameObject::load(int x, int y, int width, int height, std::string textureID)
 {
@@ -20,4 +24,5 @@ void GameObject::draw(SDL_Renderer* pRenderer)
 void GameObject::update()
 {
 	m_x += 1;
+	m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
 }

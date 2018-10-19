@@ -1,4 +1,9 @@
+#include "Game.h"
+#include <SDL_image.h>
+#include <iostream>
+#include"TextureManager.h"
 #include "Enemy.h"
+#include "GameObject.h"
 
 void Enemy::update()
 {
