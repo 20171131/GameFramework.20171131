@@ -7,7 +7,7 @@
 
 void Monster::update()
 {
-	if (m_x > 500)
+	if (m_x > 350)
 	{
 		a = -num;
 	}
