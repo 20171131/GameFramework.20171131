@@ -1,7 +1,7 @@
 #pragma once
-#include "LoaderParams.h"
 #include "SDL.h"
 #include <map>
+#include "LoaderParams.h"
 
 class GameObject
 {
@@ -13,15 +13,8 @@ public:
 protected:
 	GameObject(const LoaderParams* pParams) {}
 	virtual ~GameObject() {}
-
 	std::string m_textureID;
 	int m_currentFrame;
 	int m_currentRow;
 	int m_x;
-	int m_y;
-	int m_width;
-	int m_height;
-	int a = 1;
-	int num;
 };
-

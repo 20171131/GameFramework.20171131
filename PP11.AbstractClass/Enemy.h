@@ -1,5 +1,4 @@
 #pragma once
-#include <map>
 #include "SDLGameObject.h"
 
 class Enemy : public SDLGameObject

@@ -1,7 +1,5 @@
 #pragma once
-#include "SDL.h"
 #include "SDLGameObject.h"
-#include <map>
 
 class Player :public SDLGameObject
 {

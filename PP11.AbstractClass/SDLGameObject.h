@@ -1,4 +1,5 @@
 #pragma once
+//#include "SDL.h"
 #include <map>
 #include "GameObject.h"
 
@@ -9,6 +10,7 @@ public:
 	virtual void draw();
 	virtual void update();
 	virtual void clean();
+
 protected:
 	int m_x;
 	int m_y;
@@ -18,4 +20,3 @@ protected:
 	int m_currentFrame;
 	std::string m_textureID;
 };
-

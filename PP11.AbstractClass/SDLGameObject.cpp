@@ -1,4 +1,5 @@
 #include "SDLGameObject.h"
+#include "Game.h"
 #include "TextureManager.h"
 
 SDLGameObject::SDLGameObject(const LoaderParams* pParams) : GameObject(pParams)
@@ -9,6 +10,7 @@ SDLGameObject::SDLGameObject(const LoaderParams* pParams) : GameObject(pParams)
 	m_height = pParams->getHeight();
 
 	m_textureID = pParams->getTextureID();
+
 	m_currentRow = 1;
 	m_currentFrame = 1;
 }
