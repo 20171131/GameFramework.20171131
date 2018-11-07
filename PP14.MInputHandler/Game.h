@@ -11,7 +11,6 @@
 class Game
 {
 private:
-
 	Game() {}
 	static Game* s_pInstance;
 
@@ -23,6 +22,8 @@ private:
 	int m_currentFrame;
 
 	std::vector<GameObject*> m_gameObjects;
+
+	
 
 public:
 
@@ -45,5 +46,6 @@ public:
 	void handleEvents();
 	bool running() { return m_bRunning; }
 	void clean();
+	void quit();
 
 };	typedef Game TheGame;

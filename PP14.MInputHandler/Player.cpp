@@ -1,11 +1,6 @@
 ﻿#include "Player.h"
 #include "InputHandler.h"
 
-//Player::Player(const LoaderParams* pParams) : SDLGameObject(pParams)
-//{
-
-//}
-
 Player::Player(const LoaderParams* pParams) :SDLGameObject(pParams)
 {
 
@@ -37,17 +32,14 @@ void Player::handleInput()
 	{
 		m_velocity.setX(2);
 	}
-
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT))
 	{
 		m_velocity.setX(-2);
 	}
-
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP))
 	{
 		m_velocity.setY(-2);
 	}
-
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN))
 	{
 		m_velocity.setY(2);
@@ -58,5 +50,10 @@ void Player::handleInput()
 		m_velocity.setX(1);
 	}
 
+
+
+	// void Enemy::handleInput() 추가 : 마우스 motion
+	Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
+	m_velocity = (*vec - m_position) / 100;
 
 }

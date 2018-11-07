@@ -1,7 +1,7 @@
 #include "InputHandler.h"
 #include "Game.h"
 
-InputHandler* InputHandler::s_pInstance=NULL;
+InputHandler* InputHandler::s_pInstance = NULL;
 
 InputHandler::InputHandler()
 {
@@ -22,12 +22,51 @@ void InputHandler::clean()
 void InputHandler::update()
 {
 	SDL_Event event;
+	
 	while (SDL_PollEvent(&event))
 	{
+		/*if (event.type == SDL_MOUSEMOTION)
+		{
+			m_mousePosition->setX(event.motion.x);
+			m_mousePosition->setY(event.motion.y);
+		}
+
+		else if (event.type == SDL_MOUSEBUTTONDOWN)
+		{
+			if (event.button.button == SDL_BUTTON_LEFT)
+			{
+				m_mouseButtonStates[LEFT] = true;
+			}
+			if (event.button.button == SDL_BUTTON_MIDDLE)
+			{
+				m_mouseButtonStates[MIDDLE] = true;
+			}
+			if (event.button.button == SDL_BUTTON_RIGHT)
+			{
+				m_mouseButtonStates[RIGHT] = true;
+			}
+		}
+
+		else if (event.type == SDL_MOUSEBUTTONUP)
+		{
+			if (event.button.button == SDL_BUTTON_LEFT)
+			{
+				m_mouseButtonStates[LEFT] = false;
+			}
+			if (event.button.button == SDL_BUTTON_MIDDLE)
+			{
+				m_mouseButtonStates[MIDDLE] = false;
+			}
+			if (event.button.button == SDL_BUTTON_RIGHT)
+			{
+				m_mouseButtonStates[RIGHT] = false;
+			}
+		}*/
+
 		switch (event.type)
 		{
 		case SDL_QUIT:
-			TheGame::Instance()->clean();
+			TheGame::Instance()->quit();
 			break;
 		case SDL_MOUSEMOTION:
 			onMouseMove(event);
