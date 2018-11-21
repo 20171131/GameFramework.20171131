@@ -1,9 +1,13 @@
 #include "Game.h"
 #include "MenuState.h"
+#include "InputHandler.h"
+#include "PlayState.h"
 #include <SDL_image.h>
 #include <iostream>
 
 Game* Game::s_pInstance = 0;
+PlayState* PlayState::s_pInstance = 0;
+MenuState* MenuState::s_pInstance = 0;
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
@@ -47,6 +51,7 @@ void Game::clean()
 void Game::handleEvents()
 {
 	TheInputHandler::Instance()->update();
+
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RETURN))
 	{
 		m_pGameStateMachine->changeState(PlayState::Instance());
@@ -57,9 +62,4 @@ void Game::handleEvents()
 void Game::update()
 {
 	m_pGameStateMachine->update();
-}
-
-void Game::quit()
-{
-
 }

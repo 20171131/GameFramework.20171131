@@ -12,6 +12,7 @@ public:
 	void render();
 
 private:
+	std::vector<GameState*> m_gameStates;
 	GameState * m_currentState;
 	GameState* m_prevState;
 };
