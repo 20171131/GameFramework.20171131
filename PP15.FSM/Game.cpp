@@ -11,25 +11,28 @@ MenuState* MenuState::s_pInstance = 0;
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
-	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
-	{
-		m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, SDL_WINDOW_SHOWN);
+	//if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
+	//{
+	//	m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, SDL_WINDOW_SHOWN);
 
-		if (m_pWindow != 0)
-		{
-			m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, 0);
-		}
+	//	if (m_pWindow != 0)
+	//	{
+	//		m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, 0);
+	//	}
 
-		m_bRunning = true;
+	//	m_bRunning = true;
 
-		m_pGameStateMachine = new GameStateMachine();
-		m_pGameStateMachine->changeState(MenuState::Instance());
+	//	m_pGameStateMachine = new GameStateMachine();
+	//	m_pGameStateMachine->changeState(MenuState::Instance());
 
-	}
-	else 
-	{
-		return false; // sdl could not initialize
-	}
+	//}
+	//else 
+	//{
+	//	return false; // sdl could not initialize
+	//}
+	m_pGameStateMachine = new GameStateMachine();
+	m_pGameStateMachine->changeState(MenuState::Instance());
+
 	return true;
 }
 
