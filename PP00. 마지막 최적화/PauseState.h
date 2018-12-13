@@ -11,7 +11,6 @@ private:
 	static void s_resumePlay();
 	static PauseState* s_pInstance;
 	static const std::string s_pauseID;
-	std::vector<GameObject*> m_gameObjects;
 
 public:
 	virtual void update();

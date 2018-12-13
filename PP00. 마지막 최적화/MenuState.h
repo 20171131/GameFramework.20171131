@@ -3,9 +3,6 @@
 
 class MenuState : public GameState
 {
-protected:
-	std::vector<GameObject*> m_gameObjects;
-
 private:
 	static const std::string s_menuID;
 	static MenuState* s_pInstance;

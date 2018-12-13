@@ -11,10 +11,6 @@ const std::string PlayState::s_playID = "PLAY";
 
 void PlayState::update()
 {
-	//for (int i = 0; i < m_gameObjects.size(); i++)
-	//{
-	//	m_gameObjects[i]->update();
-	//}
 	GameState::update();
 
 	if (checkCollision(dynamic_cast<SDLGameObject*>(m_gameObjects[0]), dynamic_cast<SDLGameObject*>(m_gameObjects[1])))
@@ -30,10 +26,6 @@ void PlayState::update()
 
 void PlayState::render()
 {
-	/*for (int i = 0; i < m_gameObjects.size(); i++)
-	{
-		m_gameObjects[i]->draw();
-	}*/
 	GameState::render();
 }
 

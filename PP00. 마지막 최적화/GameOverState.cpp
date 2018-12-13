@@ -20,36 +20,25 @@ void GameOverState::s_restartPlay()
 
 void GameOverState::update()
 {
-	/*for (int i = 0; i < m_gameObjects.size(); i++)
-	{
-		m_gameObjects[i]->update();
-	}*/
 	GameState::update();
 }
 
 void GameOverState::render()
 {
-	/*for (int i = 0; i < m_gameObjects.size(); i++)
-	{
-		m_gameObjects[i]->draw();
-	}*/
 	GameState::render();
 }
 
 bool GameOverState::onEnter()
 {
-	if (!TheTextureManager::Instance()->load("assets/gameover.png",
-		"gameovertext", TheGame::Instance()->getRenderer()))
+	if (!TheTextureManager::Instance()->load("assets/gameover.png",	"gameovertext", TheGame::Instance()->getRenderer()))
 	{
 		return false;
 	}
-	if (!TheTextureManager::Instance()->load("assets/main.png",
-		"mainbutton", TheGame::Instance()->getRenderer()))
+	if (!TheTextureManager::Instance()->load("assets/main.png", "mainbutton", TheGame::Instance()->getRenderer()))
 	{
 		return false;
 	}
-	if (!TheTextureManager::Instance()->load("assets/restart.png",
-		"restartbutton", TheGame::Instance()->getRenderer()))
+	if (!TheTextureManager::Instance()->load("assets/restart.png", "restartbutton", TheGame::Instance()->getRenderer()))
 	{
 		return false;
 	}
