@@ -55,7 +55,6 @@ void Game::handleEvents()
 	{
 		m_pGameStateMachine->changeState(PlayState::Instance());
 	}
-
 }
 
 void Game::update()

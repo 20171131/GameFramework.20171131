@@ -28,5 +28,4 @@ private:
 	static const std::string s_gameOverID;
 	static GameOverState* s_pInstance;
 
-	
 };

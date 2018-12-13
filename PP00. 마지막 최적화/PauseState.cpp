@@ -3,6 +3,7 @@
 #include "MenuState.h"
 #include "MenuButton.h"
 #include "InputHandler.h"
+#include "PlayState.h"
 
 const std::string PauseState::s_pauseID = "PAUSE";
 PauseState* PauseState::s_pInstance = NULL;
@@ -14,7 +15,7 @@ void PauseState::s_pauseToMain()
 
 void PauseState::s_resumePlay()
 {
-	TheGame::Instance()->getStateMachine()->popState();
+	TheGame::Instance()->getStateMachine()->changeState(PlayState::Instance());
 }
 
 void PauseState::update()

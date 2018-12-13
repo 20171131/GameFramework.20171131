@@ -45,7 +45,6 @@ void InputHandler::update()
 		default:
 			break;
 		}
-
 	}
 }
 
